@@ -2,6 +2,11 @@
 
 BONK is a fun, interactive touchscreen game designed for Arduino-compatible microcontrollers with TFT displays. The game features various modes, including single-player and multiplayer options, with different game variants.
 
+![BONK Game Screenshot](screenshots/BONK_game.JPEG)
+
+## Demo Video
+[![BONK Game Demo](screenshots/BONK_thumbnail.JPEG)](https://youtu.be/your-video-id)
+
 ## Hardware Requirements
 
 - Arduino-compatible microcontroller (tested on Teensy)
@@ -14,15 +19,37 @@ BONK is a fun, interactive touchscreen game designed for Arduino-compatible micr
 - **BONK Chicken**: The original BONK game featuring chicken characters
 - **BONK Bunny**: Alternative game variant with bunny characters
 
+| BONK Chicken | BONK Bunny |
+|:------------:|:----------:|
+| ![BONK Chicken](screenshots/BONK_chicken.JPEG) | ![BONK Bunny](screenshots/BONK_bunny.JPEG) |
+
 ## Game Modes
 
 - **Single Player**: Test your reflexes in solo mode
 - **Two Player**: Compete against a friend to see who can get the highest score
-- **Difficulty Levels**: Choose between "Easy" and "Shred Gnar" (hard) modes
+
+![Player Start Screen](screenshots/BONK_player-start.JPEG) ![Multiplayer Mode](screenshots/BONK_Multiplayer.JPEG)
+
+## Difficulty Levels
+
+Choose between different difficulty settings to match your skill level:
+
+- **Easy Mode**: Designed for kids and beginners, includes a "late tap" feature that gives players more time to react
+- **Shred Gnar Mode**: Challenging mode for experienced players with faster gameplay
+
+The game provides visual feedback with a green flash and center dot to register a successful "BONK" when the target is hit correctly.
+
+![Difficulty Selection](screenshots/BONK_Difficulty.JPEG)
 
 ## Game Mechanics
 
 Players tap appearing objects on the screen to score points. The faster you tap, the more points you earn. Special items occasionally appear for bonus points. The game includes a timer, and players must score as many points as possible before time runs out.
+
+### Scoring and Results
+
+At the end of each game, the final score is displayed along with statistics on your performance.
+
+![Final Results Screen](screenshots/BONK_final-results.JPEG)
 
 ## File Structure
 
@@ -30,6 +57,12 @@ Players tap appearing objects on the screen to score points. The faster you tap,
 - `BONK_Completed_REV5.0_Multiplayer.ino`: Enhanced version with multiplayer support
 - `BONK_Fixed.ino`: Bug-fixed version
 - `ESP32_Teensy_41_Demo.ino`: Demo for ESP32 + Teensy 4.1 version
+
+## Menu System
+
+The game features an intuitive menu system for selecting game variants, modes, and difficulty levels.
+
+![Game Menu](screenshots/BONK_menu.JPEG)
 
 ## Installation
 
