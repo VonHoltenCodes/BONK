@@ -4,9 +4,6 @@ BONK is a fun, interactive touchscreen game designed for Arduino-compatible micr
 
 ![BONK Game Screenshot](screenshots/BONK_game.JPEG)
 
-## Demo Video
-[![BONK Game Demo](screenshots/BONK_thumbnail.JPEG)](https://youtu.be/your-video-id)
-
 ## Hardware Requirements
 
 - Arduino-compatible microcontroller (tested on Teensy)
