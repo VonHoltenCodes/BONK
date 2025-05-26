@@ -119,7 +119,18 @@ This game was developed to showcase the amazing interactive capabilities of touc
 
 ## 📄 License
 
-This project is open source and available for educational and recreational purposes. 🎓
+This project is open source and available for **educational and recreational purposes only**. 🎓
+
+**✅ Permitted Uses:**
+- 📚 Educational and learning projects
+- 🎮 Personal recreational enjoyment  
+- 🔬 Non-commercial research and development
+- 🎓 Academic coursework and projects
+- 🤝 Open source community contributions
+
+**❌ Commercial Use Prohibited** - See [LICENSE](LICENSE) file for complete terms.
+
+⚠️ **No Warranties** - Use at your own risk, especially when working with electronic hardware!
 
 ## 👨‍💻 Credits
 
