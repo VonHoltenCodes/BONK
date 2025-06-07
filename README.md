@@ -13,17 +13,18 @@ BONK is a fun, interactive touchscreen game designed for Arduino-compatible micr
 
 ## 🎯 Game Variants
 
-Choose from three exciting themed variants:
+Choose from four exciting themed variants:
 
 - 🐔 **BONK Chicken**: The original classic game featuring chicken characters and explosive special effects
 - 🐰 **BONK Bunny**: Easter-themed variant with adorable bunnies and colorful eggs for special points
 - 🇺🇸 **BONK Patriots**: Memorial Day/4th of July patriotic theme with American flags and firework effects!
+- 🐕 **BONK Bluey**: NEW! Features Bluey and Bingo characters with red balloons that pop into colorful confetti! (Fan-made variant)
 
 | 🐔 BONK Chicken | 🐰 BONK Bunny |
 |:----------------:|:--------------:|
 | ![BONK Chicken](screenshots/BONK_chicken.JPEG) | ![BONK Bunny](screenshots/BONK_bunny.JPEG) |
 
-> 🆕 **NEW!** BONK Patriots variant featuring American flags as targets, patriotic stars for bonus points, and spectacular fireworks effects instead of explosions!
+> 🆕 **NEW!** BONK Bluey variant created by Daisy (age 9) featuring beloved characters Bluey and Bingo! Tap them for points and pop red balloons for colorful confetti celebrations!
 
 ## 👥 Game Modes
 
@@ -67,14 +68,15 @@ At the end of each game, celebrate your achievements with detailed results inclu
 
 - 🚀 `BONK_Completed_REV4.0Frenzy.ino`: Base game with "Frenzy" mode
 - 👥 `BONK_Completed_REV5.0_Multiplayer.ino`: Enhanced version with multiplayer support  
-- 🇺🇸 `BONK_Completed_REV6.0_Patriots.ino`: **NEW!** Patriots variant with American flags and fireworks
+- 🇺🇸 `BONK_Completed_REV6.0_Patriots.ino`: Patriots variant with American flags and fireworks
+- 🐕 `BONK_Completed_REV7.0_Bluey/`: **NEW!** Bluey variant featuring characters from the popular show
 - 🔧 `BONK_Fixed.ino`: Stable bug-fixed version
 - 📱 `fixed.ino`: Alternative fixed version
 
 ## 🎮 Menu System
 
 The game features an intuitive touch-based menu system with smooth navigation through:
-- 🎯 Game variant selection (Chicken/Bunny/Patriots)
+- 🎯 Game variant selection (Chicken/Bunny/Patriots/Bluey)
 - 👥 Player mode selection (1P/2P)  
 - ⚡ Difficulty selection per player
 - 🚀 Ready-to-play confirmation screens
@@ -117,6 +119,18 @@ This game was developed to showcase the amazing interactive capabilities of touc
 - 🎮 Multiple game modes and difficulty levels
 - 🎆 Custom visual effects (explosions/fireworks)
 
+## ⚖️ Legal Disclaimers
+
+### Bluey Variant Copyright Notice
+The BONK Bluey variant is **FAN ART** created for educational and recreational purposes only. Bluey™ and all related characters are trademarks of Ludo Studio Pty Ltd and are used here under fair use for non-commercial, educational purposes. This variant is not affiliated with, endorsed by, or sponsored by Ludo Studio, the Australian Broadcasting Corporation (ABC), or BBC Studios. No copyright infringement is intended.
+
+**This variant is strictly for:**
+- Personal educational use
+- Non-commercial recreational enjoyment
+- Learning programming concepts
+
+**NOT for any commercial use whatsoever.**
+
 ## 📄 License
 
 This project is open source and available for **educational and recreational purposes only**. 🎓
@@ -136,4 +150,4 @@ This project is open source and available for **educational and recreational pur
 
 Created with ❤️ by **VonHoltenCodes**
 
-> 🎮 **Happy BONKing!** Whether you're celebrating Easter with bunnies, enjoying classic chicken action, or showing your patriotic spirit with flags and fireworks - there's a BONK variant for every occasion! 🎉
+> 🎮 **Happy BONKing!** Whether you're celebrating Easter with bunnies, enjoying classic chicken action, showing your patriotic spirit with flags and fireworks, or dancing along with Bluey and Bingo - there's a BONK variant for every occasion! 🎉
