@@ -106,6 +106,12 @@ The game features an intuitive touch-based menu system with smooth navigation th
 
 3. 🚀 **Upload** your preferred `.ino` file to your microcontroller and start BONKing!
 
+## 🎨 Create Your Own Variant!
+
+Want to create your own BONK variant with your kids? Check out our guides:
+- 📖 [Creative Sessions Guide](CREATIVE_SESSIONS_GUIDE.md) - Complete framework for coding with children
+- 📝 [Bluey Variant Example](CREATIVE_SESSION_EXAMPLE_BLUEY.md) - Real example from Daisy's session
+
 ## 💻 Development
 
 This game was developed to showcase the amazing interactive capabilities of touchscreen displays with Arduino-compatible microcontrollers! 
