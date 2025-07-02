@@ -31,7 +31,7 @@ Choose from five exciting themed variants:
 
 | 🐉 BONK Toothless | 🐉 BONK Light Fury |
 |:----------------:|:--------------:|
-| ![BONK Toothless](screenshots/BONK_TOOTHLESS.JPEG) | ![BONK Light Fury](screenshots/BONK_LIGHTFURRY.JPEG) |
+| ![BONK Toothless](screenshots/BONK_LIGHTFURRY.JPEG) | ![BONK Light Fury](screenshots/BONK_TOOTHLESS.JPEG) |
 
 ### 🐉 Dragons Gameplay
 ![BONK Dragons in Action](screenshots/BONK_DRAGONS.gif)
