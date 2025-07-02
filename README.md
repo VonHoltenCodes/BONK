@@ -13,18 +13,30 @@ BONK is a fun, interactive touchscreen game designed for Arduino-compatible micr
 
 ## 🎯 Game Variants
 
-Choose from four exciting themed variants:
+Choose from five exciting themed variants:
 
 - 🐔 **BONK Chicken**: The original classic game featuring chicken characters and explosive special effects
 - 🐰 **BONK Bunny**: Easter-themed variant with adorable bunnies and colorful eggs for special points
 - 🇺🇸 **BONK Patriots**: Memorial Day/4th of July patriotic theme with American flags and firework effects!
-- 🐕 **BONK Bluey**: NEW! Features Bluey and Bingo characters with red balloons that pop into colorful confetti! (Fan-made variant)
+- 🐕 **BONK Bluey**: Features Bluey and Bingo characters with red balloons that pop into colorful confetti! (Fan-made variant)
+- 🐉 **BONK Dragons**: NEW! How to Train Your Dragon themed with Toothless and Light Fury, collect fish and shoot plasma blasts!
 
 | 🐔 BONK Chicken | 🐰 BONK Bunny |
 |:----------------:|:--------------:|
 | ![BONK Chicken](screenshots/BONK_chicken.JPEG) | ![BONK Bunny](screenshots/BONK_bunny.JPEG) |
 
-> 🆕 **NEW!** BONK Bluey variant created by Daisy (age 9) featuring beloved characters Bluey and Bingo! Tap them for points and pop red balloons for colorful confetti celebrations!
+| 🐕 BONK Bluey | 🐕 BONK Bingo |
+|:----------------:|:--------------:|
+| ![BONK Bluey](screenshots/BONK_BLUEY.JPEG) | ![BONK Bingo](screenshots/BONK_BINGO.JPEG) |
+
+| 🐉 BONK Toothless | 🐉 BONK Light Fury |
+|:----------------:|:--------------:|
+| ![BONK Toothless](screenshots/BONK_TOOTHLESS.JPEG) | ![BONK Light Fury](screenshots/BONK_LIGHTFURRY.JPEG) |
+
+### 🐉 Dragons Gameplay
+![BONK Dragons in Action](screenshots/BONK_DRAGONS.gif)
+
+> 🆕 **NEW!** BONK Dragons variant created by Nolan featuring Toothless (Night Fury) with green eyes and Light Fury! Collect fish for "RIDES" and shoot plasma blasts across the screen!
 
 ## 👥 Game Modes
 
@@ -49,10 +61,10 @@ The game provides satisfying visual feedback with a green flash and center dot t
 Players tap appearing objects on the screen to score points. The faster you tap, the more points you earn! ⚡
 
 **Special Features:**
-- 🎯 **Main Targets**: Chickens, Bunnies, or American Flags (depending on variant)
-- ⭐ **Bonus Items**: Special characters appear for extra points - Eggs, Stars, or Blue Chickens!
+- 🎯 **Main Targets**: Chickens, Bunnies, American Flags, Bluey/Bingo, or Dragons (depending on variant)
+- ⭐ **Bonus Items**: Special characters appear for extra points - Eggs, Stars, Blue Chickens, Balloons, or Fish!
 - ⏱️ **45-Second Timer**: Score as many points as possible before time runs out
-- 🎆 **Visual Effects**: Explosions, fireworks, and satisfying feedback for every hit
+- 🎆 **Visual Effects**: Explosions, fireworks, confetti, plasma blasts, and satisfying feedback for every hit
 
 ### 📊 Scoring and Results
 
@@ -69,19 +81,20 @@ At the end of each game, celebrate your achievements with detailed results inclu
 - 🚀 `BONK_Completed_REV4.0Frenzy.ino`: Base game with "Frenzy" mode
 - 👥 `BONK_Completed_REV5.0_Multiplayer.ino`: Enhanced version with multiplayer support  
 - 🇺🇸 `BONK_Completed_REV6.0_Patriots.ino`: Patriots variant with American flags and fireworks
-- 🐕 `BONK_Completed_REV7.0_Bluey/`: **NEW!** Bluey variant featuring characters from the popular show
+- 🐕 `BONK_Completed_REV7.0_Bluey/`: Bluey variant featuring characters from the popular show
+- 🐉 `BONK_Completed_REV8.0_Dragons/`: **NEW!** How to Train Your Dragon variant with plasma blasts!
 - 🔧 `BONK_Fixed.ino`: Stable bug-fixed version
 - 📱 `fixed.ino`: Alternative fixed version
 
 ## 🎮 Menu System
 
 The game features an intuitive touch-based menu system with smooth navigation through:
-- 🎯 Game variant selection (Chicken/Bunny/Patriots/Bluey)
+- 🎯 Game variant selection (Chicken/Bunny/Patriots/Bluey/Dragons)
 - 👥 Player mode selection (1P/2P)  
 - ⚡ Difficulty selection per player
 - 🚀 Ready-to-play confirmation screens
 
-![Game Menu](screenshots/BONK_menu.JPEG)
+![Game Menu - 5 Variants](screenshots/BONK_menu_5game.JPEG)
 
 ## 🛠️ Installation
 
@@ -130,7 +143,10 @@ This game was developed to showcase the amazing interactive capabilities of touc
 ### Bluey Variant Copyright Notice
 The BONK Bluey variant is **FAN ART** created for educational and recreational purposes only. Bluey™ and all related characters are trademarks of Ludo Studio Pty Ltd and are used here under fair use for non-commercial, educational purposes. This variant is not affiliated with, endorsed by, or sponsored by Ludo Studio, the Australian Broadcasting Corporation (ABC), or BBC Studios. No copyright infringement is intended.
 
-**This variant is strictly for:**
+### How to Train Your Dragon Variant Copyright Notice
+The BONK Dragons variant is **FAN ART** created for educational and recreational purposes only. How to Train Your Dragon™, Toothless™, Light Fury™ and all related characters are trademarks of DreamWorks Animation LLC and are used here under fair use for non-commercial, educational purposes. This variant is not affiliated with, endorsed by, or sponsored by DreamWorks Animation, Universal Pictures, or NBCUniversal. No copyright infringement is intended.
+
+**These variants are strictly for:**
 - Personal educational use
 - Non-commercial recreational enjoyment
 - Learning programming concepts
