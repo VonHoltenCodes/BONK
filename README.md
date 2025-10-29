@@ -1,8 +1,26 @@
 # 🎮 BONK Game
 
-BONK is a fun, interactive touchscreen game designed for Arduino-compatible microcontrollers with TFT displays. The game features various modes, including single-player and multiplayer options, with multiple exciting game variants! 🚀
+BONK is a fun, interactive touchscreen game that runs on **multiple platforms** - from Arduino-compatible microcontrollers with TFT displays to **native MS-DOS on vintage PCs**! The game features various modes, including single-player and multiplayer options, with multiple exciting game variants! 🚀
 
 ![BONK Game Screenshot](screenshots/BONK_game.JPEG)
+
+## 🆕 NEW! BONK v9.5 - DOS Edition
+
+**Now runs on REAL DOS hardware from the 1990s!** 💾
+
+![BONK DOS Edition](screenshots/BONK_DOS.JPEG)
+
+BONK v9.5 brings the whack-a-mole action to **native MS-DOS** with:
+- 💾 **Fits on a 1.44MB floppy disk** (with Teensy version!)
+- 🎵 **PC Speaker audio** (no sound card required!)
+- 🖥️ **VGA Mode 13h graphics** (320x200, 256 colors)
+- 🖱️ **Mouse-driven gameplay**
+- 🔄 **Infinite replay mode** - return to menu after game over
+- 🎮 **Runs on 386+ CPUs** - tested on RetroNobilis (Celeron 800, Voodoo3, SB Live!)
+
+> **"Built in 1995, Running in 2025... FOR REAL!"**
+
+👉 **[Check out BONK v9.5 Floppy & DOS Edition](BONK_v9.5_Floppy_DOS_Edition/)** for complete source code, compilation instructions, and documentation!
 
 ## 🔧 Hardware Requirements
 
@@ -79,10 +97,15 @@ At the end of each game, celebrate your achievements with detailed results inclu
 ## 📁 File Structure
 
 - 🚀 `BONK_Completed_REV4.0Frenzy.ino`: Base game with "Frenzy" mode
-- 👥 `BONK_Completed_REV5.0_Multiplayer.ino`: Enhanced version with multiplayer support  
+- 👥 `BONK_Completed_REV5.0_Multiplayer.ino`: Enhanced version with multiplayer support
 - 🇺🇸 `BONK_Completed_REV6.0_Patriots.ino`: Patriots variant with American flags and fireworks
 - 🐕 `BONK_Completed_REV7.0_Bluey/`: Bluey variant featuring characters from the popular show
-- 🐉 `BONK_Completed_REV8.0_Dragons/`: **NEW!** How to Train Your Dragon variant with plasma blasts!
+- 🐉 `BONK_Completed_REV8.0_Dragons/`: How to Train Your Dragon variant with plasma blasts!
+- 💾 `BONK_v9.5_Floppy_DOS_Edition/`: **NEW!** Native MS-DOS version + Teensy floppy edition!
+  - `dos_port/`: Complete DOS game in pure C with PC Speaker audio
+  - `teensy_source/`: Teensy 4.1 firmware for embedded version
+  - `floppy_files/`: Ready-to-burn floppy disk contents
+  - `documentation/`: Complete technical documentation
 - 🔧 `BONK_Fixed.ino`: Stable bug-fixed version
 - 📱 `fixed.ino`: Alternative fixed version
 
