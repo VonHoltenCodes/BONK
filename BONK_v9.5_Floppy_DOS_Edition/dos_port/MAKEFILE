@@ -1,0 +1,53 @@
+# BONK DOS Edition Makefile
+# Compile with DJGPP or Turbo C++
+
+# DJGPP (recommended for modern systems)
+CC=gcc
+CFLAGS=-Wall -O2 -march=i386
+LDFLAGS=-s
+
+# Output
+TARGET=BONK.EXE
+
+# Source files
+SOURCES=BONK_DOS.C SOUND.C
+OBJECTS=$(SOURCES:.C=.O)
+
+# Default target
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(LDFLAGS) -o $@ $(OBJECTS)
+	@echo "✓ BONK.EXE compiled successfully!"
+	@echo "Size: " && ls -lh $(TARGET)
+
+%.O: %.C
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJECTS) $(TARGET)
+	@echo "Cleaned build files"
+
+# Create bootable floppy image
+floppy: $(TARGET)
+	@echo "Creating bootable floppy image..."
+	dd if=/dev/zero of=BONK.IMG bs=1440k count=1
+	mkfs.msdos BONK.IMG
+	mcopy -i BONK.IMG $(TARGET) ::
+	mcopy -i BONK.IMG AUTORUN.BAT ::
+	@echo "✓ BONK.IMG created (1.44 MB floppy image)"
+
+# Test with DOSBox
+test: $(TARGET)
+	dosbox $(TARGET)
+
+# Package for distribution
+package: $(TARGET)
+	mkdir -p BONK_DOS
+	cp $(TARGET) BONK_DOS/
+	cp README_DOS.TXT BONK_DOS/
+	cp MOUSE.COM BONK_DOS/
+	zip -r BONK_DOS.ZIP BONK_DOS/
+	@echo "✓ BONK_DOS.ZIP created"
+
+.PHONY: all clean floppy test package

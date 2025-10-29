@@ -1,0 +1,205 @@
+================================================================================
+  BONK DOS EDITION - COMPILATION GUIDE
+================================================================================
+
+OPTION 1: DJGPP (Modern DOS Compiler)
+--------------------------------------
+Best for compiling on Windows/Linux and cross-compiling for DOS.
+
+1. Install DJGPP:
+   Download from: http://www.delorie.com/djgpp/
+
+   Windows: Use setup.exe installer
+   Linux:   sudo apt-get install gcc-djgpp
+
+2. Compile:
+   make
+
+   Or manually:
+   gcc -Wall -O2 -march=i386 BONK_DOS.C SOUND.C -o BONK.EXE -s
+
+3. Test in DOSBox:
+   dosbox BONK.EXE
+
+
+OPTION 2: Turbo C++ 3.0 (Period-Correct!)
+-----------------------------------------
+Compile on actual DOS or in DOSBox.
+
+1. Install Turbo C++ 3.0
+
+2. Create project file BONK.PRJ:
+   BONK_DOS.C
+   SOUND.C
+
+3. Compile:
+   Press F9 in Turbo C++ IDE
+
+   Or command line:
+   tcc -mc -O -eBONK.EXE BONK_DOS.C SOUND.C
+
+
+OPTION 3: Open Watcom (Free!)
+------------------------------
+Modern open-source C compiler for DOS.
+
+1. Install Open Watcom:
+   Download from: http://www.openwatcom.org/
+
+2. Compile:
+   wcl386 -l=dos4g -ox BONK_DOS.C SOUND.C -fe=BONK.EXE
+
+
+TESTING:
+--------
+DOSBox (Recommended):
+  1. Install DOSBox
+  2. Mount directory: mount c ~/bonk
+  3. Run: c:
+  4. Run: bonk.exe
+
+Real Hardware:
+  1. Copy BONK.EXE to DOS machine
+  2. Load MOUSE.COM
+  3. Run BONK.EXE
+
+
+OPTIMIZATION FLAGS:
+-------------------
+DJGPP:
+  -O2          Optimize for speed
+  -O3          Maximum optimization
+  -march=i386  Target 386+ CPUs
+  -s           Strip symbols (smaller exe)
+
+Turbo C++:
+  -O           Optimize for speed
+  -mc          Compact memory model
+  -G           Generate 286 code
+
+Open Watcom:
+  -ox          Maximum optimization
+  -6           Pentium Pro optimizations
+
+
+EXPECTED OUTPUT:
+----------------
+BONK.EXE size: ~80 KB (depending on compiler)
+
+With DJGPP:     ~78 KB (best compression)
+With Turbo C++: ~85 KB
+With Watcom:    ~82 KB
+
+
+TROUBLESHOOTING:
+----------------
+"undefined reference to `sin`"
+  → Add -lm flag: gcc ... -lm
+
+"Cannot find graphics.h"
+  → Remove #include <graphics.h> (we use direct VGA)
+
+"DOS/4GW error"
+  → Need DOS extender for 32-bit code
+  → Use -l=dos4g with Watcom
+
+
+CROSS-COMPILATION:
+------------------
+Compile on Linux for DOS:
+
+1. Install cross-compiler:
+   sudo apt-get install gcc-djgpp
+
+2. Compile:
+   i586-pc-msdosdjgpp-gcc BONK_DOS.C SOUND.C -o BONK.EXE
+
+3. Test in DOSBox or QEMU
+
+
+CREATING BOOTABLE FLOPPY IMAGE:
+--------------------------------
+Linux:
+  make floppy
+
+Manual:
+  dd if=/dev/zero of=BONK.IMG bs=1440k count=1
+  mkfs.msdos BONK.IMG
+  mcopy -i BONK.IMG BONK.EXE ::
+  mcopy -i BONK.IMG AUTORUN.BAT ::
+
+Write to real floppy:
+  dd if=BONK.IMG of=/dev/fd0
+
+
+FILE SIZE OPTIMIZATION:
+-----------------------
+To fit more on the floppy:
+
+1. Strip debug symbols:
+   strip BONK.EXE
+
+2. Compress executable:
+   upx --best BONK.EXE
+   (Can reduce to ~40 KB!)
+
+3. Remove unused features:
+   Comment out MOD music code
+   Use PC Speaker only
+
+
+PERFORMANCE TUNING:
+-------------------
+For 386 systems:
+  - Reduce MAX_TARGETS to 3
+  - Lower sample rate to 8000 Hz
+  - Disable double buffering
+
+For Pentium+:
+  - Increase MAX_TARGETS to 8
+  - Higher sample rate (22050 Hz)
+  - Add parallax backgrounds
+
+
+SOUND BLASTER SETUP:
+--------------------
+If Sound Blaster not detected:
+
+1. Set BLASTER environment variable:
+   SET BLASTER=A220 I5 D1 T4
+
+   A220 = Base address (220h)
+   I5   = IRQ 5
+   D1   = DMA channel 1
+   T4   = Sound Blaster 16
+
+2. Common addresses:
+   220h (most common)
+   240h
+   260h
+   280h
+
+
+DISTRIBUTION:
+-------------
+Package for release:
+  make package
+
+Creates BONK_DOS.ZIP with:
+  - BONK.EXE
+  - MOUSE.COM
+  - README_DOS.TXT
+  - AUTORUN.BAT
+
+Total size: ~120 KB zipped!
+
+
+LEGAL:
+------
+* Free for personal/educational use
+* Commercial use requires permission
+* Credit VonHoltenCodes
+
+================================================================================
+Happy Compiling! 🎮
+================================================================================
