@@ -1,0 +1,51 @@
+# Makefile for Von Holten Maze Game
+# DOS Raycasting 3D Maze Explorer
+# By: VonHoltenCodes (2025)
+
+# Compiler options
+CC = gcc
+CFLAGS = -Wall -O2 -march=i386 -s
+LDFLAGS = -lm
+
+# Target executable
+TARGET = MAZE.EXE
+
+# Source files
+SOURCES = maze.c maze_data.c
+
+# Object files
+OBJECTS = $(SOURCES:.c=.o)
+
+# Default target
+all: $(TARGET)
+
+# Link the executable
+$(TARGET): $(OBJECTS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS) $(LDFLAGS)
+	@echo "Build complete: $(TARGET)"
+	@echo "Size:"
+	@ls -lh $(TARGET)
+
+# Compile source files
+%.o: %.c maze.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Clean build artifacts
+clean:
+	rm -f $(OBJECTS) $(TARGET)
+	@echo "Clean complete"
+
+# Turbo C++ build (for DOS)
+turbo:
+	@echo "Use on DOS machine:"
+	@echo "  tcc -mc -O -eMAZE.EXE maze.c maze_data.c"
+
+# Test in DOSBox
+test: $(TARGET)
+	dosbox $(TARGET)
+
+# Show maze map
+map:
+	@cat MAZE_MAP.txt
+
+.PHONY: all clean turbo test map
